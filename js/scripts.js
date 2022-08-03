@@ -1,23 +1,31 @@
 // Página Inicial
 
+
+
+
+
+
 const invisibleContent = document.querySelector("#invisible-content");
-const btnIniciarTour = document.querySelector(".btn-iniciar-tour");
-const inputName = document.querySelector("#name");
+const $btnIniciarTour = $(".btn-iniciar-tour");
+const $inputName = $("#name");
 const textWelcome = document.querySelector("#welcome span");
-const header = document.querySelector("header");
+const $header = $("header");
 const alertNoName = document.querySelector(".alert-no-name");
 
-btnIniciarTour.addEventListener("click", function(){
 
-    const name = inputName.value;
-        if (name === "" || name.length < 2){
+
+$btnIniciarTour.click(() => {
+
+    $name = $inputName.val();
+        if ($name === "" || $name.length < 3){
             alertNoName.style.display = 'block'
         }
         else {
 
-    textWelcome.textContent = ` ${name}`;
+$header.slideUp()
+    textWelcome.textContent = ` ${$name}`;
     invisibleContent.id = "visible-content";
-    header.style.display = 'none' 
+   
 }   
 });
 
@@ -28,7 +36,7 @@ const imgHabilities = document.querySelector("#img-habilities");
 
 let i = 0
 
-    function changeHabilities(){
+   const changeHabilities = () => {
         i++
 
             if(i){

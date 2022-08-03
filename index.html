@@ -8,20 +8,24 @@
     rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
     crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.css">
+    
 </head>
 <body>
     <header class="justify-content-center align-items-center  ">
         <div class="header-all">
-            <img class="header-img" src="./assets/header-img.png">
+         
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_vnikrcia.json"  background="transparent" 
+           speed="1" class='video-header'  style="width: 300px; height: 300px;"   loop  autoplay></lottie-player>
             <div class="header-content mb-3">
                 <p class="h5 text-light ">Olá, eu me chamo</p>
-                <h1 class="my-name">Matzy Gonçalves</h1>
+                <h1 id="cu" class="my-name">Matzy Gonçalves</h1>
                 <p class="h5  text-light ">e sou desenvolvedor Front-End</p>
             </div>
             <div>
-            <div>
+            <div>g
                 <input type="text" id="name" autocomplete="off"
-                placeholder="Qual seu nome?" class="m-auto p-1 d-block ">
+                placeholder="Qual seu nome?" class="m-auto p-1 d-block">
             </div>
             <p class="alert-no-name mt-3 text-center
             text-light" >Por favor, digite seu <span>nome</span> :)</p>
@@ -49,13 +53,24 @@
         </div>
       </div>
     </section>
-  
-    <section>
+  <div class="empurra-section">
+
+  </div>
+    <section id="about-me">
       <div class="about-me">
-        <h1 class="text-learning text-light ">Comecei a estudar a 26 dias</h1>
-        <h1 class="text-learning text-light ">e desde então....</h1>
-        <div id="learning" class="d-flex justify-content-start align-items-center">
-            <h1 class="text-learning text-light ">estou estudando muito todos os dias</h1>
+        <img class="img-perfil" src="./assets/img-perfil.png">
+        <p class=" h1 text-center text-light ">Sobre mim</p>
+        <h1 class="text-learning text-light ">Já aviso que aqui você não encontrará nenhum texto dizendo que 
+          sempre amei a tecnologia e sempre quis ser um desenvolvedor, pois não seria verdade. Comecei a despertar
+          interesse na àrea por pura necessidade. Me vi desempregado enquanto meu amigo programador estava bem estavel
+          na àrea. A principio resolvi estudar apenas para fazer alguns trabalhos e ganhar algum dinheiro. 
+          Porém a cada coisa nova apendida eu ia cada vez gostando mais e ficando viciado em programar. 
+          E aqui estou eu, hoje sim, um amante da programação e meu desejo é em um futuro próximo me tornar programador
+          full stack. Apesar da história dar a empress"ao que faz anos que comecei a estudar, hoje fazem exatos XX dias 
+          que </h1>
+        <div id="learning" class="d-flex flex-row justify-content-start align-items-center">
+
+            <h1 id="learning" class="text-learning text-light"> estou estudando muito a respeito de</h1>
             <div class="habilities-container d-flex  align-items-center justify-content-start">
             <h1 id="habilities" class=" text-light text-center">HTML</h1>
             <img id="img-habilities" src="./assets/1.png">
@@ -65,7 +80,31 @@
     </section>
 
 
+    <section class="bg-danger mt-4">
 
+      <p class="h1 text-light text-center">Pojetos</p>
+
+      <div id="projects-container">
+        <div>
+        <h4>Cópia Site Netflix</h4>
+        <p>loren ipsum lil</p>
+         <a><button>Vizualizar</button></a>
+        </div>
+        <div>
+          
+        </div>
+        <div>
+          
+        </div>
+
+
+
+
+      </div>
+
+
+
+    </section>
 
 
 
@@ -114,15 +153,15 @@
     </div>
   </section> -->
   
-  <script src="./js/scripts.js">
-  </script>
+ 
+  <script src="./js/jquery-3.6.0.js"></script>
+  <script src="./js/scripts.js"></script>
+
   
-  
-  
-  
-  
-  
-  <script src="./JS/barraCSS.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+    crossorigin="anonymous"></script>
+
   </body>
 </html>
