@@ -1,69 +1,77 @@
 // Página Inicial
 
 
-const invisibleContent = document.querySelector("#invisible-content");
-const $btnIniciarTour = $(".btn-iniciar-tour");
-const $inputName = $("#name");
-const textWelcome = document.querySelector("#welcome span");
-const $header = $("header");
-const alertNoName = document.querySelector(".alert-no-name");
+    const invisibleContent = document.querySelector("#invisible-content");
+    const $btnIniciarTour = $(".btn-iniciar-tour");
+    const $inputName = $("#name");
+    const textWelcome = document.querySelector("#welcome span");
+    const $header = $("header");
+    const alertNoName = document.querySelector(".alert-no-name");
 
 
 
-$btnIniciarTour.click(() => {
+    $btnIniciarTour.click(() => {
 
-    $name = $inputName.val();
-        if ($name === "" || $name.length < 3){
-            alertNoName.style.display = 'block'
-        }
-        else {
-
-$header.slideUp()
-    textWelcome.textContent = ` ${$name}`;
-    invisibleContent.id = "visible-content";
-   
-}   
-});
-
-// Efeito mudando o que estou estudando...
-
-const textHabilities = document.querySelector("#habilities");
-const imgHabilities = document.querySelector("#img-habilities");
-
-let i = 0
-
-   const changeHabilities = () => {
-        i++
-
-            if(i){
-                imgHabilities.src = `./assets/${i}.png`;
+        $name = $inputName.val();
+            if ($name === "" || $name.length < 3){
+                alertNoName.style.display = 'block'
             }
+            else {
 
-                switch(i){
+        $header.slideUp()
+        textWelcome.textContent = ` ${$name}`;
+        invisibleContent.id = "visible-content";
+    
+    }   
+    });
 
-                case 1 : textHabilities.textContent = "HTML"
-                break
 
-                case 2 : textHabilities.textContent = "CSS"
-                break
 
-                case 3 : textHabilities.textContent = "JavaScript"
-                break
+    // Efeito mudando o que estou estudando...
 
-                case 4 : textHabilities.textContent = "Git"
-                break
+    const $textHabilities = $("#habilities");
+    const imgHabilities = document.querySelector("#img-habilities");
+    const tecnologies = ["HTML", "CSS", "JavaScript", "Git", "BootStrap", "Native"];
+    
+    let counter = 0
 
-                case 5 : textHabilities.textContent = "BootStrap"
-                break
+    const changeHabilities = () => {
 
-                case 6 : textHabilities.textContent = "Native"
-                break
+        $textHabilities.text(tecnologies[counter]) ;
+        imgHabilities.src = `./assets/${counter}.png`;
 
+            counter++
+
+                if(counter === tecnologies.length){
+                    counter = 0
                 }
+        }
 
-            if(i === 6){
-                i = 0
+        changeHabilities()
+
+        setInterval(changeHabilities, 800)
+
+
+
+
+
+
+        
+
+        const $points = $(".points");
+        const pointsQuantity = ["", ".", "..", "..."];
+        let counterPoints = 0
+        const pointsAnimation = () => {
+
+
+            $points.text(pointsQuantity[counterPoints]);
+
+            counterPoints++
+
+            if(counterPoints === pointsQuantity.length){
+                counterPoints = 0
             }
     }
 
-    setInterval(changeHabilities, 800)
+
+    setInterval(pointsAnimation, 400)

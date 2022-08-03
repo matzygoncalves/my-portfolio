@@ -130,13 +130,9 @@ header button {
 .habilities-container{
     margin-left: 0.4%;
 }
-
 #habilities {
-
-margin-top: -5px;
-
+    margin-top: -5px;
 }
-
 .empurra-section{
    padding-top: 140px;
 }
@@ -146,20 +142,13 @@ margin-top: -5px;
     filter: brightness(100%);
 }
 .about-me{
-    
-    
-
- width: 80%;
-   margin: auto;
-   
+    width: 80%;
+    margin: auto;
+    max-width:500px
 }
-
-
-
 #welcome {
     font-size: 1.2rem;
     margin-left: 20px;
-   
 }
 #welcome span {
     animation-name: nomeInicio;
@@ -170,37 +159,27 @@ margin-top: -5px;
 }
 .about-me .img-perfil {
     height: 200px;
-  margin: auto;
-  display: block;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px var(--colorTheme);
-  margin-bottom: -20px;
- 
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px var(--colorTheme);
+    margin-bottom: -20px;
 }
-
 #learning {
-    
-    margin-top: -5px
+    margin-top: -5px;
 }
 .about-me img {
     height: 15px;
     transform: translateY(-20%);
     margin-left: 3%;
 }
-
-
 #projects-container {
-
-
-width: 100%;
-height:auto;
-overflow: auto;
-display: flex;
-
+    width: 100%;
+    height:auto;
+    overflow: auto;
+    display: flex;
 }
-
 #projects-container div {
-
     background: rgb(27, 27, 27);
     width: 260px;
     height:330px;
@@ -212,13 +191,8 @@ display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
-
-   
-
 }
-
-#projects-container a button {
-
+#projects-container a .button-active {
    width:100%;
    padding: 3px 50px;
    border-radius: 10px;
@@ -228,21 +202,109 @@ display: flex;
    animation-timing-function: ease-in-out  ;
    animation-iteration-count: infinite;
    animation-direction: alternate;
-
-   
-
+   cursor: pointer;
 }
-
-
-
-
+#projects-container a button {
+    width:100%;
+    padding: 3px 50px;
+    border-radius: 10px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor:default;
+ }
+ #projects-container a button:hover{
+    width:100%;
+    padding: 3px 50px;
+    border-radius: 10px;
+    background: transparent;
+    color:var(--colorTheme);
+    border: 1px solid var(--colorTheme);
+    cursor:default;
+    transition: ease;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-property: all;
+}
+#projects-container div .img-active {
+    width: 45%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px var(--colorTheme);
+    filter: none;
+}
 #projects-container div img {
-
-width: 45%;
-border-radius: 20px;
-box-shadow: 0px 0px 10px var(--colorTheme)
-
+    width: 45%;
+    border-radius: 20px;
+    filter: grayscale(100%); 
+}
+#projects-container div img:hover {
+    width: 45%;
+    border-radius: 20px;
+    filter: grayscale(0%);
+    transition: ease;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-property: all;
+    box-shadow: 0px 0px 10px var(--colorTheme);     
+}
+    
+#projects-container::-webkit-scrollbar {
+    display: none;
+}
+#projects-container::-webkit-scrollbar-button {
+    display: none;
+}
+#projects-container::-webkit-scrollbar-corner {
+    display: none;
+}
+#projects-container::-webkit-scrollbar-thumb {
+    display: none;
+}
+#projects-container::-webkit-scrollbar-track {
+    display: none;
+}
+#projects-container::-webkit-scrollbar-track-piece {
+    display: none;
 }
 
 
+@media screen and (min-width: 756px) {
+
+
+    #projects-container {
+    width:90%;
+    margin: auto;
+    height:auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  
+}
+#arrow-right {
+    display: none;
+}
+.about-me {
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 750px;
+}
+
+.about-me .img-perfil {
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px var(--colorTheme);
+    margin-right: 40px;
+    margin-top: 77px;
+}
+
+
+
+
+
+
+
+
+}
 
