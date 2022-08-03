@@ -5,7 +5,7 @@ body{
     background: rgb(19, 19, 19);
 }
 #invisible-content {
-    display: block; 
+    display: none; 
 }
 #visible-content {
     display: block;
@@ -173,7 +173,7 @@ margin-top: -5px;
   margin: auto;
   display: block;
   border-radius: 50%;
-  box-shadow: 0px 0px 8px var(--colorTheme);
+  box-shadow: 0px 0px 10px var(--colorTheme);
   margin-bottom: -20px;
  
 }
@@ -191,7 +191,7 @@ margin-top: -5px;
 
 #projects-container {
 
-background: blue;
+
 width: 100%;
 height:auto;
 overflow: auto;
@@ -201,13 +201,46 @@ display: flex;
 
 #projects-container div {
 
-    background: rgb(221, 221, 221);
-    width: 200px;
-    height:300px;
+    background: rgb(27, 27, 27);
+    width: 260px;
+    height:330px;
     flex-shrink: 0;
     margin: 30px 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
    
+
+}
+
+#projects-container a button {
+
+   width:100%;
+   padding: 3px 50px;
+   border-radius: 10px;
+   background: transparent;
+   animation-name: buttonStart;
+   animation-duration: 1.2s ;
+   animation-timing-function: ease-in-out  ;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+
+   
+
+}
+
+
+
+
+#projects-container div img {
+
+width: 45%;
+border-radius: 20px;
+box-shadow: 0px 0px 10px var(--colorTheme)
 
 }
 
