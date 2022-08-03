@@ -1,10 +1,6 @@
 // Página Inicial
 
 
-
-
-
-
 const invisibleContent = document.querySelector("#invisible-content");
 const $btnIniciarTour = $(".btn-iniciar-tour");
 const $inputName = $("#name");
